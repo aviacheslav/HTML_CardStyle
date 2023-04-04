@@ -1,0 +1,106 @@
+section{
+    display:inline-block;
+    width: 400px;
+    height: 240px;
+    border-radius: 10px;
+    color:white;
+    border-style: rigid;
+    border-color: black;
+    position: relative;
+    /*margin:2px;*/
+    margin-bottom:10px;
+    overflow: hidden;
+}
+/*.Card{
+    display:inline-block;
+    width: 400px;
+    height: 240px;
+    border-radius: 10px;
+    color:white;
+    border-style: rigid;
+    border-color: black;
+    position: relative;
+    
+    margin-bottom:10px;
+    
+}*/
+p{
+    margin-left: 30px;
+}
+
+.cLeftCard{
+    /*background-color: red;*/
+    /*background: rgb(36,14,0);
+    background: linear-gradient(90deg, rgba(36,14,0,1) 0%, rgba(168,98,61,1) 29%, rgba(0,212,255,1) 100%);*/
+    background: linear-gradient(90deg, rgba(145,85,77,1), rgba(203,22,39,1))
+}
+.cCentralCard{
+    background-color: green;
+    /*margin: 0px 50px 50px 0px;*/
+    margin-left:50px;
+    margin-right:50px;
+    /*background: rgb(29,162,195);
+    background: linear-gradient(90deg, rgba(29,162,195,1) 0%, rgba(168,98,61,1) 29%, rgba(0,212,255,1) 100%);*/
+    background: linear-gradient(90deg,rgba(21,170,137,1) ,rgba(102,113,25,1))
+}
+.cRightCard{
+    /*background: rgb(118,196,180);
+    background: linear-gradient(90deg, rgba(118,196,180,1) 0%, rgba(168,98,61,1) 29%, rgba(0,212,255,1) 100%);   */
+    background: linear-gradient(90deg, rgba(20,178,226,1) 0%, rgba(105,120,126,1) 49%)
+}
+.name{
+    font-size: 16pt;
+    padding-top: 15px;
+}
+.price{
+    font-size: 32pt;
+    margin-top:20px;
+    margin-bottom: 10px;
+}
+.price_comment{
+    font-size: 14pt;
+}
+.cPic{
+    position:relative;
+    height: 30px;
+    width: 30px;
+    /*padding-top: 30px;*/
+    /*padding-bottom:90%;
+    padding-bottom:90px;
+    padding-left:40px;*/
+    bottom: 155px;
+    left: 240px;
+    
+}
+/*.svg{
+    fill: white;
+}*/
+section::before, section::after{
+    content:"";
+    position:absolute; /* or vv?*/
+    background-color: white;
+    width:170px;
+    height:170px;
+    border-radius:50%;
+    opacity: 50%;
+    /*overflow: hidden;*/
+   
+}
+
+section::before{
+    top: -5%;
+    left: 70%;
+    /*background-color:red;*/
+}
+
+section::after{
+    top: 40%;
+    left: 60%;
+}
+
+section:hover{
+    section:before, section:after{
+        background-color:red;
+    }
+}
+
