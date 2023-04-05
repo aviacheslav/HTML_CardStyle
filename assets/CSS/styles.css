@@ -72,9 +72,23 @@ p{
     left: 240px;
     
 }
+
 /*.svg{
     fill: white;
 }*/
+section:hover{
+    background-color: azure;
+    border-style: solid;
+    border-width: 5px;
+    border-color: brown;
+    transform:rotate(180deg);
+    transform-origin: 200px, 240px;
+    transition-delay: 50ms;
+    transition-duration: 1000ms;
+    /*transition-property: ;*/
+   
+}
+
 section::before, section::after{
     content:"";
     position:absolute; /* or vv?*/
@@ -98,9 +112,45 @@ section::after{
     left: 60%;
 }
 
-section:hover{
-    section:before, section:after{
-        background-color:red;
-    }
+section:hover::before{
+   top:20%;
+   left: -5%;
+   transition-delay: 50ms;
+   transition-duration: 1000ms;
+}
+section:hover::after{
+    top:10%;
+    left: 80%;
+    transition-delay: 50ms;
+    transition-duration: 1000ms;
+ }
+
+.DecorStripe{
+    position:relative;
+    height: 10px;
+    bottom: 10px;/*so by logic*/
+    bottom:-40px;/*so by fact :)*/
+    background-color: brown;
+    width:0px;
+}
+section:hover .DecorStripe{
+    width:100%;
+    transition-delay: 50ms;
+    transition-duration: 1000ms;
+}
+
+.price::before{
+    content:"";
+    position:absolute;
+    height: 10px;
+    top: 0px;
+    left:0px;
+    background-color: brown;
+    width:0px;
+}
+section:hover .price::before{
+    width:100%;
+    transition-delay: 50ms;
+    transition-duration: 1000ms;
 }
 
